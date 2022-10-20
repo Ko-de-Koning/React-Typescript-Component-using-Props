@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from "react";
 import './App.css';
 import NewComponent from './NewComponent';
-import List from "./components/List";
+import AddToList from './components/AddToList';
+import List from './components/list'
 
 interface IState {
   people: {
@@ -25,10 +26,12 @@ function App() {
   ]);
 
   const age = 42;
+  
   return (
     <div className="App">
       <h1>Invitations</h1>
       <List people={people} />
+      <AddToList />
       <NewComponent name="Bill" age={age} isOlderThanForty={age > 40} />
     </div>
   );
