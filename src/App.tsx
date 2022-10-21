@@ -5,7 +5,7 @@ import NewComponent from './NewComponent';
 import AddToList from './components/AddToList';
 import List from './components/list'
 
-interface IState {
+export interface IState {
   people: {
     name: string
     age: number
@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <h1>Invitations</h1>
       <List people={people} />
-      <AddToList />
+      <AddToList people={people} setPeople={setPeople} />
       <NewComponent name="Bill" age={age} isOlderThanForty={age > 40} />
     </div>
   );
